@@ -5,6 +5,9 @@ you can perform SMS-based user verification in your Android app automatically â€
 without requiring the user to manually type verification codes and without needing any extra app permissions.
 
 ---
+## Demo
+
+https://github.com/user-attachments/assets/5e36cded-c5c6-4d83-9b97-01d472d3d513
 
 ## Installation
 
