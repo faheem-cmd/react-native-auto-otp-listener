@@ -16,6 +16,10 @@ npm install react-native-auto-otp-listener
 yarn add react-native-auto-otp-listener
 ```
 
+## Demo
+
+https://github.com/user-attachments/assets/5e36cded-c5c6-4d83-9b97-01d472d3d513
+
 ```sh
 import { useEffect, useState } from 'react';
 import { Text, View, StyleSheet, Button, Alert } from 'react-native';
