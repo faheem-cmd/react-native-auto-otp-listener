@@ -12,7 +12,3 @@ npm install react-native-auto-otp-listener
 ```
 
 # react-native-auto-otp-listener
-
-# react-native-auto-otp-listener
-
-# react-native-auto-otp-listener
