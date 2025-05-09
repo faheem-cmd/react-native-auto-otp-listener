@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Build output
+android/build/
+ios/build/
+
+# IDEs
+.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
