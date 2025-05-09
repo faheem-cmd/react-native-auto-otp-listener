@@ -1,8 +1,7 @@
-// src/index.tsx
 import { NativeEventEmitter, NativeModules } from 'react-native';
-import AutoOtpListener from './NativeAutoOtpListener';
+const { AutoOtpListener } = NativeModules;
 
-const emitter = new NativeEventEmitter(NativeModules.AutoOtpListener);
+const emitter = new NativeEventEmitter(AutoOtpListener);
 
 export function startListeningForOTP() {
   AutoOtpListener.startListeningForOTP();
@@ -20,9 +19,20 @@ export function addOTPErrorListener(callback: (err: string) => void) {
   return emitter.addListener('onOTPError', callback);
 }
 
+export async function getAppHash(): Promise<string> {
+  try {
+    const hash = await AutoOtpListener.getAppHash();
+    return hash;
+  } catch (error) {
+    console.error('Failed to get app hash:', error);
+    throw error;
+  }
+}
+
 export default {
   startListeningForOTP,
   stopListeningForOTP,
   addOTPListener,
   addOTPErrorListener,
+  getAppHash,
 };

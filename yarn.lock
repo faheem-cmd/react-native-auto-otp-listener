@@ -6154,10 +6154,10 @@ react-is@^18.0.0:
     react-native "0.79.2"
     react-native-auto-otp-listener "file:../react-native-auto-otp-listener-0.1.0.tgz"
 
-"react-native-auto-otp-listener@file:../react-native-auto-otp-listener-0.1.0.tgz":
-  version "0.1.0"
-  resolved "file:react-native-auto-otp-listener-0.1.0.tgz"
-  integrity sha512-7sw6aB7+sIbK6gaLspybIOcPZkk68V3aqk+C+Og0suXu9dBDoSA4YqqrVfi4v7KKokr8/acKxwaMoT9zBftf8w==
+"react-native-auto-otp-listener@file:../react-native-auto-otp-listener-0.1.4.tgz":
+  version "0.1.4"
+  resolved "file:react-native-auto-otp-listener-0.1.4.tgz"
+  integrity sha512-1SBLpqSTyCK5+nzjGmtj4rrh5i0uvjfocPEf6fNsTaqqTCS1oomIyZEL4PrDfW6z+qpLAXYE97ggnHMUagO9ag==
 
 react-native-builder-bob@^0.40.10:
   version "0.40.10"
