@@ -19,9 +19,7 @@ class MySMSBroadcastReceiver : BroadcastReceiver() {
             val status = extras?.get(SmsRetriever.EXTRA_STATUS) as? Status
             if (status?.statusCode == CommonStatusCodes.SUCCESS) {
                 val message = extras.getString(SmsRetriever.EXTRA_SMS_MESSAGE)
-                val otp = Regex("\\d{6,}").find(message ?: "")?.value
-                Log.d("AutoOtpListener", "Extracted OTP: $otp")
-                listener?.onOtpReceived(otp)
+                listener?.onOtpReceived(message)
             } else {
                 Log.e("AutoOtpListener", "SMS retrieval failed with status: $status")
             }

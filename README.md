@@ -1,6 +1,7 @@
 # react-native-auto-otp-listener
 
-With **react-native-auto-otp-listener**, you can perform SMS-based user verification in your Android app automatically —  
+With **react-native-auto-otp-listener**,
+you can perform SMS-based user verification in your Android app automatically —  
 without requiring the user to manually type verification codes and without needing any extra app permissions.
 
 ---
@@ -9,7 +10,13 @@ without requiring the user to manually type verification codes and without needi
 
 ```sh
 npm install react-native-auto-otp-listener
+```
 
+```sh
+yarn add react-native-auto-otp-listener
+```
+
+```sh
 import { useEffect, useState } from 'react';
 import { Text, View, StyleSheet, Button, Alert } from 'react-native';
 import {
@@ -26,10 +33,21 @@ export default function App() {
   useEffect(() => {
     startListeningForOTP();
 
-    const otpSub = addOTPListener((receivedOtp) => {
-      console.log('Received OTP:', receivedOtp);
-      setOtp(receivedOtp);
-      Alert.alert('OTP Received', receivedOtp);
+    const otpSub = addOTPListener((message) => {
+      console.log('Received message:', message);
+
+      // Use regex to extract a 6-digit number
+      const match = message.match(/\b\d{6}\b/);
+
+      if (match) {
+        const extractedOtp = match[0];
+        console.log('Extracted OTP:', extractedOtp);
+        setOtp(extractedOtp);
+        Alert.alert('OTP Received', extractedOtp);
+      } else {
+        console.warn('No 6-digit OTP found in message');
+        setError('No 6-digit OTP found in message');
+      }
     });
 
     const errorSub = addOTPErrorListener((err) => {
