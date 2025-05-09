@@ -1,6 +1,6 @@
 {
   "name": "react-native-auto-otp-listener",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "With the react-native-auto-otp-listener, you can perform SMS-based user verification in your Android app automatically, without requiring the  user to manually type verification codes, and without requiring any extra app permissions.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
